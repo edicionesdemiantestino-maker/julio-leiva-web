@@ -68,11 +68,15 @@ export default function Portfolio() {
                     alt={cover.alt}
                     fill
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    className="object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                    className="object-cover transition duration-700 group-hover:scale-105 group-hover:brightness-75"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/25">
-                    <span className="flex size-14 items-center justify-center rounded-full border border-white/70 bg-black/25 text-white backdrop-blur-sm transition duration-300 group-hover:scale-110 group-hover:bg-[#d5a77b] group-hover:text-[#171411]">
-                      <Play size={18} fill="currentColor" aria-hidden="true" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors duration-500 group-hover:bg-black/20 group-focus-visible:bg-black/20">
+                    <span className="flex size-20 items-center justify-center rounded-full border border-white/45 bg-black/20 text-white/75 shadow-xl backdrop-blur-sm transition duration-300 group-hover:scale-110 group-hover:border-white group-hover:bg-white group-hover:text-black group-focus-visible:scale-110 group-focus-visible:border-white group-focus-visible:bg-white group-focus-visible:text-black">
+                      <Play
+                        size={30}
+                        fill="currentColor"
+                        aria-hidden="true"
+                      />
                     </span>
                   </div>
                 </div>
