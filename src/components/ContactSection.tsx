@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Play } from "lucide-react";
+import { Disc3, Mail, MessageCircle, Play } from "lucide-react";
 import ContactSubmitButton from "./ContactSubmitButton";
 import Reveal from "./Reveal";
 
@@ -10,55 +10,60 @@ export default function ContactSection() {
   return (
     <section
       id="contacto"
-      className="bg-zinc-950 px-6 py-24 text-[#f4f1eb] sm:px-10 sm:py-28 lg:px-16"
+      className="bg-zinc-950 px-4 py-20 text-[#f4f1eb] sm:px-6 sm:py-24 md:px-8 md:py-28 lg:px-16"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-        <Reveal>
+      <div className="mx-auto max-w-3xl">
+        <Reveal className="mb-10 text-center sm:mb-12">
           <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#d5a77b]">
             Hagamos música
           </p>
-          <h2 className="max-w-lg font-serif text-5xl font-normal leading-[1.05] tracking-tight sm:text-7xl">
+          <h2 className="mx-auto max-w-2xl font-serif text-4xl font-normal leading-[1.08] tracking-tight md:text-6xl lg:text-7xl">
             Una fecha especial empieza con una conversación.
           </h2>
-          <p className="mt-6 max-w-md text-sm leading-7 text-white/60">
-            Cuéntanos sobre tu evento y nos pondremos en contacto para conversar
-            los detalles.
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
+            Cuéntanos sobre tu evento y conversemos los detalles.
           </p>
+        </Reveal>
 
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a
-              href={`https://wa.me/?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex size-12 items-center justify-center rounded-full border border-white/15 transition-colors hover:bg-white hover:text-black"
-              aria-label="Consultar por WhatsApp"
-              title="WhatsApp"
-            >
-              <MessageCircle size={19} aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.youtube.com/results?search_query=Julio+Leiva"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex size-12 items-center justify-center rounded-full border border-white/15 transition-colors hover:bg-white hover:text-black"
-              aria-label="Buscar a Julio Leiva en YouTube"
-              title="YouTube"
-            >
-              <Play size={19} fill="currentColor" aria-hidden="true" />
-            </a>
-            <a
-              href="mailto:?subject=Contrataciones%20-%20Julio%20Leiva"
-              className="inline-flex size-12 items-center justify-center rounded-full border border-white/15 transition-colors hover:bg-white hover:text-black"
-              aria-label="Escribir un email"
-              title="Email"
-            >
-              <Mail size={19} aria-hidden="true" />
-            </a>
-          </div>
-          <p className="mt-4 max-w-sm text-xs leading-5 text-white/45">
-            Los enlaces de WhatsApp, YouTube y email se pueden personalizar
-            cuando estén disponibles los datos oficiales de contacto.
-          </p>
+        <Reveal className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
+          <a
+            href={`https://wa.me/?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-4 text-xs uppercase tracking-[0.12em] text-white/80 transition-colors hover:border-white/40 hover:bg-white/5 hover:text-white"
+            aria-label="Consultar por WhatsApp"
+          >
+            <MessageCircle size={17} aria-hidden="true" />
+            WhatsApp
+          </a>
+          <a
+            href="https://www.youtube.com/results?search_query=Julio+Leiva"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-4 text-xs uppercase tracking-[0.12em] text-white/80 transition-colors hover:border-white/40 hover:bg-white/5 hover:text-white"
+            aria-label="Buscar a Julio Leiva en YouTube"
+          >
+            <Play size={16} fill="currentColor" aria-hidden="true" />
+            YouTube
+          </a>
+          <a
+            href="https://open.spotify.com/search/Julio%20Leiva"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-4 text-xs uppercase tracking-[0.12em] text-white/80 transition-colors hover:border-white/40 hover:bg-white/5 hover:text-white"
+            aria-label="Buscar a Julio Leiva en Spotify"
+          >
+            <Disc3 size={17} aria-hidden="true" />
+            Spotify
+          </a>
+          <a
+            href="mailto:?subject=Contrataciones%20-%20Julio%20Leiva"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-4 text-xs uppercase tracking-[0.12em] text-white/80 transition-colors hover:border-white/40 hover:bg-white/5 hover:text-white"
+            aria-label="Escribir un email"
+          >
+            <Mail size={17} aria-hidden="true" />
+            Email
+          </a>
         </Reveal>
 
         <Reveal delay={0.1}>
@@ -66,14 +71,14 @@ export default function ContactSection() {
             action="mailto:?subject=Contrataciones%20-%20Julio%20Leiva"
             method="post"
             encType="text/plain"
-            className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-md sm:p-8"
+            className="mx-auto w-full max-w-3xl space-y-5 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur-md sm:space-y-6 sm:p-8 md:p-10"
           >
             <label className="block">
               <span className="mb-2 block text-[10px] uppercase tracking-[0.2em] text-white/60">
                 Nombre
               </span>
               <input
-                className="w-full rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-sm text-white outline-none transition-all placeholder:text-white/35 focus:ring-2 focus:ring-white/20"
+                className="min-h-12 w-full rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-base text-white outline-none transition-all placeholder:text-white/35 focus:ring-2 focus:ring-white/20 sm:text-sm"
                 type="text"
                 name="Nombre"
                 autoComplete="name"
@@ -87,7 +92,7 @@ export default function ContactSection() {
                 Tipo de evento
               </span>
               <select
-                className="w-full appearance-none rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-sm text-white outline-none transition-all focus:ring-2 focus:ring-white/20"
+                className="min-h-12 w-full appearance-none rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-base text-white outline-none transition-all focus:ring-2 focus:ring-white/20 sm:text-sm"
                 name="Tipo de evento"
                 defaultValue=""
                 required
@@ -107,7 +112,7 @@ export default function ContactSection() {
                 Fecha
               </span>
               <input
-                className="w-full rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-sm text-white outline-none transition-all focus:ring-2 focus:ring-white/20"
+                className="min-h-12 w-full rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-base text-white outline-none transition-all focus:ring-2 focus:ring-white/20 sm:text-sm"
                 type="date"
                 name="Fecha"
               />
@@ -118,7 +123,7 @@ export default function ContactSection() {
                 Mensaje
               </span>
               <textarea
-                className="min-h-28 w-full resize-y rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-sm text-white outline-none transition-all placeholder:text-white/35 focus:ring-2 focus:ring-white/20"
+                className="min-h-32 w-full resize-y rounded-xl border border-white/5 bg-black/40 px-4 py-3 text-base text-white outline-none transition-all placeholder:text-white/35 focus:ring-2 focus:ring-white/20 sm:text-sm"
                 name="Mensaje"
                 placeholder="Cuéntanos un poco más sobre tu evento"
                 required
@@ -127,7 +132,7 @@ export default function ContactSection() {
 
             <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
               <ContactSubmitButton />
-              <p className="text-xs text-white/45">
+              <p className="text-center text-xs leading-5 text-white/45 sm:text-left">
                 Se abrirá tu aplicación de correo para completar el envío.
               </p>
             </div>

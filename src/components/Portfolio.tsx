@@ -2,7 +2,15 @@ import Image from "next/image";
 import { ArrowUpRight, Play } from "lucide-react";
 import Reveal from "./Reveal";
 
-const covers = [
+type Cover = {
+  title: string;
+  image: string;
+  alt: string;
+  video: string;
+  credit?: string;
+};
+
+const covers: Cover[] = [
   {
     title: "Cover 01",
     image: "/images/Imagen1.jpg",
@@ -27,7 +35,7 @@ export default function Portfolio() {
   return (
     <section
       id="covers"
-      className="bg-zinc-950 px-6 py-24 text-[#f4f1eb] sm:px-10 sm:py-28 lg:px-16"
+      className="bg-zinc-950 px-4 py-20 text-[#f4f1eb] sm:px-6 sm:py-24 md:px-8 md:py-28 lg:px-16"
     >
       <div className="mx-auto max-w-7xl">
         <Reveal className="mb-10 flex flex-col justify-between gap-5 sm:mb-14 sm:flex-row sm:items-end">
@@ -35,7 +43,7 @@ export default function Portfolio() {
             <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#d5a77b]">
               En voz propia
             </p>
-            <h2 className="font-serif text-4xl font-normal tracking-tight sm:text-6xl">
+            <h2 className="font-serif text-4xl font-normal tracking-tight md:text-6xl lg:text-7xl">
               Covers
             </h2>
           </div>
@@ -44,7 +52,7 @@ export default function Portfolio() {
           </p>
         </Reveal>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {covers.map((cover, index) => (
             <Reveal key={cover.title} delay={index * 0.1}>
               <a
@@ -52,9 +60,9 @@ export default function Portfolio() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Reproducir ${cover.title}`}
-                className="group relative block overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]"
+                className="group relative block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-video overflow-hidden">
                   <Image
                     src={cover.image}
                     alt={cover.alt}
@@ -78,6 +86,11 @@ export default function Portfolio() {
                     aria-hidden="true"
                   />
                 </div>
+                {cover.credit && (
+                  <p className="px-5 pb-4 text-xs text-white/45">
+                    Créditos: {cover.credit}
+                  </p>
+                )}
               </a>
             </Reveal>
           ))}

@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative flex h-screen min-h-[640px] flex-col overflow-hidden bg-[#10100f] text-[#f4f1eb]"
+      className="relative flex min-h-svh flex-col overflow-hidden bg-[#10100f] text-[#f4f1eb]"
     >
       <video
         className="absolute inset-0 h-full w-full object-cover opacity-45"
@@ -26,7 +26,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 sm:px-10 lg:px-16">
+      <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-5 sm:px-6 md:px-8 lg:px-16">
         <a
           href="#inicio"
           className="font-serif text-2xl tracking-[0.12em]"
@@ -36,7 +36,7 @@ export default function HeroSection() {
         </a>
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-8 text-xs uppercase tracking-[0.2em] text-white/75 sm:flex"
+          className="hidden items-center gap-8 text-xs uppercase tracking-[0.2em] text-white/75 md:flex"
         >
           <a className="transition-colors hover:text-white" href="#adelantos">
             Adelantos
@@ -50,26 +50,26 @@ export default function HeroSection() {
         </nav>
         <a
           href="#contacto"
-          className="rounded-full border border-white/35 px-4 py-2 text-[10px] uppercase tracking-[0.17em] transition-colors hover:border-white hover:bg-white hover:text-black sm:hidden"
+          className="inline-flex min-h-11 items-center rounded-full border border-white/35 px-4 py-2 text-[10px] uppercase tracking-[0.17em] transition-colors hover:border-white hover:bg-white hover:text-black md:hidden"
         >
           Booking
         </a>
       </header>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 pb-20 text-center sm:px-10">
-        <p className="mb-5 text-[10px] uppercase tracking-[0.42em] text-[#e2bd98] sm:text-xs">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-4 pb-16 text-center sm:px-6 md:px-8 md:pb-20 lg:px-16">
+        <p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-[#e2bd98] sm:text-xs sm:tracking-[0.42em]">
           Música para sentir
         </p>
-        <h1 className="font-serif text-6xl font-normal tracking-[-0.06em] sm:text-8xl md:text-9xl">
+        <h1 className="font-serif text-5xl font-normal tracking-[-0.06em] sm:text-7xl md:text-8xl lg:text-9xl">
           Julio Leiva
         </h1>
         <p className="mt-4 text-xs uppercase tracking-[0.35em] text-white/75 sm:text-sm">
           Música &amp; Covers
         </p>
-        <div className="mt-10 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+        <div className="mt-10 flex w-full max-w-sm flex-col justify-center gap-3 md:w-auto md:max-w-none md:flex-row">
           <a
             href="#contacto"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#d5a77b] px-7 text-xs font-medium uppercase tracking-[0.13em] text-[#171411] transition-colors hover:bg-[#e6c19c]"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#d5a77b] px-6 text-xs font-medium uppercase tracking-[0.13em] text-[#171411] transition-colors hover:bg-[#e6c19c] md:w-auto md:px-7"
           >
             Contrataciones <ArrowDownRight size={16} aria-hidden="true" />
           </a>
@@ -77,7 +77,7 @@ export default function HeroSection() {
             href="https://www.youtube.com/results?search_query=Julio+Leiva"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/35 px-7 text-xs uppercase tracking-[0.13em] transition-colors hover:border-white hover:bg-white/10"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/35 px-6 text-xs uppercase tracking-[0.13em] transition-colors hover:border-white hover:bg-white/10 md:w-auto md:px-7"
           >
             <span className="flex size-5 items-center justify-center rounded-md bg-[#ff0033]">
               <Play size={12} fill="currentColor" aria-hidden="true" />
@@ -89,7 +89,7 @@ export default function HeroSection() {
 
       <a
         href="#adelantos"
-        className="relative z-10 mx-auto mb-7 flex items-center gap-3 text-[9px] uppercase tracking-[0.3em] text-white/55 transition-colors hover:text-white"
+        className="relative z-10 mx-auto mb-6 flex min-h-11 items-center gap-3 px-4 text-[9px] uppercase tracking-[0.3em] text-white/55 transition-colors hover:text-white"
       >
         Descubrir <span aria-hidden="true">↓</span>
       </a>

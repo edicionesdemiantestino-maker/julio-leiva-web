@@ -5,7 +5,7 @@ import UpcomingReleases from "@/src/components/UpcomingReleases";
 
 export default function Home() {
   return (
-    <main className="bg-zinc-950">
+    <main className="overflow-x-hidden bg-zinc-950">
       <HeroSection />
       <UpcomingReleases />
       <Portfolio />
